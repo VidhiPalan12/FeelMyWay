@@ -437,8 +437,16 @@ export default function App() {
 
   const happyText = feedback?.stars > 0 ? "Great job!" : "Try again!";
   const showConfetti = page === "question" && showResult && result?.isCorrect;
+  const confettiAreaHeight =
+    typeof window !== "undefined"
+      ? Math.max(
+          document.documentElement?.scrollHeight || 0,
+          document.body?.scrollHeight || 0,
+          window.innerHeight || 0
+        )
+      : 0;
   const confettiPieces = showConfetti
-    ? [...Array(150)].map((_, index) => {
+    ? [...Array(165)].map((_, index) => {
         const type = ['confetti--ribbon', 'confetti--tile', 'confetti--star', 'confetti--dot'][index % 4];
         const width = type === 'confetti--dot' ? 10 + Math.random() * 8 : 8 + Math.random() * 12;
         const height =
@@ -459,12 +467,12 @@ export default function App() {
         ];
         const color = colors[Math.floor(Math.random() * colors.length)];
         const left = `${6 + Math.random() * 88}%`;
-        const drift = `${-140 + Math.random() * 280}px`;
-        const sway = `${-24 + Math.random() * 48}px`;
-        const fallDistance = `${82 + Math.random() * 16}vh`;
+        const drift = `${-90 + Math.random() * 180}px`;
+        const sway = `${-14 + Math.random() * 28}px`;
+        const fallDistance = `${confettiAreaHeight + 140 + Math.random() * 220}px`;
         const rotateStart = `${Math.random() * 360}deg`;
-        const rotateMid = `${180 + Math.random() * 280}deg`;
-        const rotateEnd = `${540 + Math.random() * 420}deg`;
+        const rotateMid = `${120 + Math.random() * 180}deg`;
+        const rotateEnd = `${320 + Math.random() * 260}deg`;
         const scale = (0.82 + Math.random() * 0.5).toFixed(2);
         return (
           <div
@@ -472,12 +480,12 @@ export default function App() {
             className={`confetti ${type}`}
             style={{
               left,
-              top: `${-18 - Math.random() * 22}%`,
+              top: `${-40 - Math.random() * 220}px`,
               '--piece-width': `${width}px`,
               '--piece-height': `${height}px`,
               '--piece-color': color,
-              animationDuration: `${2.2 + Math.random() * 1.2}s`,
-              animationDelay: `${Math.random() * 0.35}s`,
+              animationDuration: `${2.2 + Math.random() * 1.1}s`,
+              animationDelay: `${Math.random() * 0.9}s`,
               '--drift': drift,
               '--sway': sway,
               '--fall-distance': fallDistance,
@@ -537,7 +545,14 @@ export default function App() {
 
   return (
     <div className="app">
-      {showConfetti && <div className="confettiArea">{confettiPieces}</div>}
+      {showConfetti && (
+        <div
+          className="confettiArea"
+          style={{ '--confetti-area-height': `${confettiAreaHeight}px` }}
+        >
+          {confettiPieces}
+        </div>
+      )}
       <aside className="sidebar">
         <div className="sidebarHeader">
           <div className="brandLabel">FeelMyWay 🌱</div>
@@ -810,9 +825,20 @@ export default function App() {
                 </div>
 
                 <div className="scenarioHero">
-                  <div className="imageBox emptyImage">
-                    <div className="imageLabel">Scenario</div>
-                  </div>
+                  {currentImageValue && !imageLoadFailed ? (
+                    <div className="imageBox">
+                      <img
+                        src={currentImageValue}
+                        alt="Scenario"
+                        loading="lazy"
+                        onError={handleImageError}
+                      />
+                    </div>
+                  ) : (
+                    <div className="imageBox emptyImage">
+                      <div className="imageLabel">Scenario</div>
+                    </div>
+                  )}
                 </div>
 
                 <div className="choicesArea scenarioChoices">

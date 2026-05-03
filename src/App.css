@@ -37,6 +37,7 @@ button {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
   background: transparent;
 }
 
@@ -1428,8 +1429,11 @@ button {
 }
 
 .confettiArea {
-  position: fixed;
-  inset: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--confetti-area-height, 100vh);
   z-index: 9999;
   pointer-events: none;
   overflow: hidden;
@@ -1443,7 +1447,7 @@ button {
   background: var(--piece-color, #ff6b6b);
   animation-name: confetti-burst-fall;
   animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.14, 0.78, 0.2, 1);
+  animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.18) inset,
     0 4px 10px rgba(15, 23, 42, 0.08);
@@ -1486,15 +1490,15 @@ button {
 
 @keyframes confetti-burst-fall {
   0% {
-    transform: translate3d(0, -4vh, 0) rotate(var(--rotate-start, 0deg))
+    transform: translate3d(0, -28px, 0) rotate(var(--rotate-start, 0deg))
       scale(var(--piece-scale, 1));
     opacity: 0;
   }
-  12% {
+  8% {
     opacity: 1;
   }
-  24% {
-    transform: translate3d(calc(var(--drift, 0px) * 0.45), 24vh, 0)
+  22% {
+    transform: translate3d(calc(var(--drift, 0px) * 0.5), 20vh, 0)
       rotate(var(--rotate-mid, 280deg))
       scale(calc(var(--piece-scale, 1) * 1.02));
     opacity: 1;
@@ -1502,7 +1506,7 @@ button {
   100% {
     transform: translate3d(
         calc(var(--drift, 0px) + var(--sway, 0px)),
-        var(--fall-distance, 110vh),
+        var(--fall-distance, calc(100% + 160px)),
         0
       )
       rotate(var(--rotate-end, 720deg))
