@@ -51,9 +51,9 @@ const creators = [
       "Passionate about biology, psychology, and learning how people think, behave, and grow. She especially enjoys exploring sleep, conditioning, genetics, and the science behind learning and memory. Beyond academics, she loves turning complex ideas into engaging explanations and creative projects that make science more interesting and accessible to others."
   },
   {
-    name: "Alice",
+    name: "Alice Sharma",
     title: "Team Member",
-    image: "A",
+    image: "AS",
     description:
       "Fascinated by neuroscience, psychology, and medicine, especially how the brain shapes the way we think, feel, and learn. She enjoys learning about the brain and body, and creating educational art and writing that makes neuroscience more accessible for younger students. She is curious, creative, and passionate about exploring how the mind works and sharing that knowledge in meaningful, engaging ways."
   },
