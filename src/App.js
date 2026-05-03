@@ -58,6 +58,13 @@ const creators = [
       "Fascinated by neuroscience, psychology, and medicine, especially how the brain shapes the way we think, feel, and learn. She enjoys learning about the brain and body, and creating educational art and writing that makes neuroscience more accessible for younger students. She is curious, creative, and passionate about exploring how the mind works and sharing that knowledge in meaningful, engaging ways."
   },
   {
+    name: "Anika Chaurasia",
+    title: "Team Member",
+    image: "AC",
+    description:
+      "Interested in psychology and in learning about how people think and feel. She enjoys playing sports, especially in team settings, and values helping others and being someone people can talk to. She is passionate about mental health awareness and wants to support people as they go through social and emotional challenges."
+  },
+  {
     name: "Anaeka",
     title: "Team Member",
     image: "AN",
