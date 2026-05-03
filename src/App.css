@@ -162,17 +162,17 @@ button {
 
 .moodPanel {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
 }
 
 .moodButton {
-  min-height: 96px;
+  min-height: 140px;
   display: grid;
   place-items: center;
-  gap: 8px;
-  padding: 12px;
-  border-radius: 18px;
+  gap: 10px;
+  padding: 16px 12px;
+  border-radius: 20px;
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 22px 60px rgba(15, 23, 42, 0.08);
   border: 2px solid rgba(255, 255, 255, 0.7);
@@ -190,26 +190,26 @@ button {
 }
 
 .moodEmoji {
-  font-size: 2.2rem;
+  font-size: 3rem;
 }
 
 .moodName {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 800;
   color: #111827;
 }
 
 .moodActionRow {
-  margin-top: 18px;
+  margin-top: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
   width: 100%;
   max-width: none;
-  min-height: 74px;
-  padding: 8px 12px;
-  border-radius: 18px;
+  min-height: 52px;
+  padding: 6px 10px;
+  border-radius: 14px;
   background: rgba(235, 248, 255, 0.82);
   border: 1px solid rgba(191, 219, 254, 0.9);
 }
@@ -531,30 +531,30 @@ button {
 }
 
 .confirmContent {
-  min-height: 460px;
+  min-height: unset;
   align-items: stretch;
 }
 
 .confirmMain {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 420px);
-  gap: 28px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(180px, 260px);
+  gap: 14px;
   align-items: stretch;
 }
 
 .confirmCopy {
   display: grid;
   align-content: start;
-  gap: 22px;
+  gap: 10px;
 }
 
 .confirmBadge {
   width: fit-content;
-  padding: 10px 18px;
+  padding: 5px 12px;
   border-radius: 999px;
   background: rgba(37, 99, 235, 0.1);
   color: #1d4ed8;
-  font-size: 1.5rem;
+  font-size: 0.95rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -562,29 +562,29 @@ button {
 
 .confirmDescription {
   max-width: 720px;
-  font-size: 1.9rem;
-  line-height: 1.75;
+  font-size: 1rem;
+  line-height: 1.55;
   color: #475569;
 }
 
 .confirmSummary {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
 }
 
 .confirmSummaryCard {
-  padding: 22px 24px;
-  border-radius: 26px;
+  padding: 10px 14px;
+  border-radius: 14px;
   background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
   border: 1px solid rgba(191, 219, 254, 0.8);
   display: grid;
-  gap: 10px;
+  gap: 4px;
 }
 
 .confirmSummaryLabel {
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -594,30 +594,30 @@ button {
 .confirmSummaryValue {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  font-size: 1.85rem;
+  gap: 6px;
+  font-size: 1rem;
   font-weight: 900;
   color: #0f172a;
 }
 
 .confirmIllustration {
   position: relative;
-  min-height: 100%;
-  padding: 28px;
-  border-radius: 30px;
+  min-height: unset;
+  padding: 14px;
+  border-radius: 18px;
   background: linear-gradient(165deg, rgba(219, 234, 254, 0.85), rgba(191, 219, 254, 0.95));
   overflow: hidden;
   display: grid;
   align-content: center;
   justify-items: center;
-  gap: 24px;
+  gap: 10px;
 }
 
 .confirmIllustrationGlow {
   position: absolute;
   inset: auto auto 12% 12%;
-  width: 220px;
-  height: 220px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 72%);
   pointer-events: none;
@@ -626,38 +626,38 @@ button {
 .confirmIllustrationEmoji {
   position: relative;
   z-index: 1;
-  width: 150px;
-  height: 150px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font-size: 5rem;
+  font-size: 2.8rem;
   background: rgba(255, 255, 255, 0.75);
-  box-shadow: 0 22px 50px rgba(37, 99, 235, 0.18);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.18);
 }
 
 .confirmIllustrationCard {
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 22px 24px;
-  border-radius: 24px;
+  padding: 10px 14px;
+  border-radius: 14px;
   background: rgba(255, 255, 255, 0.88);
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
   display: grid;
-  gap: 10px;
+  gap: 4px;
   text-align: center;
 }
 
 .confirmIllustrationTitle {
-  font-size: 1.65rem;
+  font-size: 1rem;
   font-weight: 900;
   color: #0f172a;
 }
 
 .confirmIllustrationText {
-  font-size: 1.5rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.4;
   color: #475569;
 }
 
@@ -870,9 +870,9 @@ button {
 }
 
 .confirmText {
-  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
   font-weight: 900;
-  line-height: 1.08;
+  line-height: 1.15;
   max-width: 760px;
 }
 
