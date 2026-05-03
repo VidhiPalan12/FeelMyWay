@@ -512,8 +512,8 @@ button {
 }
 
 .aboutPageCard {
-  width: min(92vw, 1180px);
-  max-width: 1180px;
+  width: min(96vw, 1320px);
+  max-width: 1320px;
   padding: 24px 26px 22px;
 }
 
@@ -706,7 +706,7 @@ button {
 
 .aboutOverview {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 260px);
+  grid-template-columns: 1fr;
   gap: 14px;
   align-items: stretch;
 }
@@ -781,12 +781,13 @@ button {
 
 .teamGrid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 12px;
 }
 
 .memberCard {
   padding: 14px;
+  min-height: 380px;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 14px 30px rgba(15, 23, 42, 0.05);
@@ -849,10 +850,8 @@ button {
   font-size: 0.98rem;
   line-height: 1.45;
   color: #475569;
-  display: -webkit-box;
-  -webkit-line-clamp: 7;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  display: block;
+  overflow: visible;
 }
 
 .logTitle,
@@ -1513,7 +1512,7 @@ button {
 
 @media (max-width: 1400px) {
   .teamGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

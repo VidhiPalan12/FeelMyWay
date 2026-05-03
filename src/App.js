@@ -58,11 +58,11 @@ const creators = [
       "Fascinated by neuroscience, psychology, and medicine, especially how the brain shapes the way we think, feel, and learn. She enjoys learning about the brain and body, and creating educational art and writing that makes neuroscience more accessible for younger students. She is curious, creative, and passionate about exploring how the mind works and sharing that knowledge in meaningful, engaging ways."
   },
   {
-    name: "Anika Chaurasia",
+    name: "Anaeka",
     title: "Team Member",
-    image: "AC",
+    image: "AN",
     description:
-      "Interested in psychology and in learning about how people think and feel. She enjoys playing sports, especially in team settings, and values helping others and being someone people can talk to. She is passionate about mental health awareness and wants to support people as they go through social and emotional challenges."
+      "I am Anaeka, a sophomore at Skyline High School. I am passionate about psychology and design. I enjoy using creativity on projects that enrich people's lives and improve overall mental well-being. I enjoy reading and painting in my spare time."
   },
   {
     name: "Ekaansh Govil",
@@ -953,14 +953,6 @@ export default function App() {
                     <div className="aboutSectionLabel">Mission Statement</div>
                     <div className="aboutMissionText">
                       Our mission is to help younger students recognize emotions, think through social situations, and practice healthier choices in a way that feels engaging, safe, and encouraging.
-                    </div>
-                  </div>
-
-                  <div className="aboutImpactCard">
-                    <div className="aboutSectionLabel">Impact So Far</div>
-                    <div className="aboutStatNumber">{logs.length}</div>
-                    <div className="aboutStatText">
-                      check-in{logs.length === 1 ? '' : 's'} shared so far, and every new log adds to our story.
                     </div>
                   </div>
                 </div>
