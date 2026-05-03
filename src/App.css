@@ -787,7 +787,6 @@ button {
 
 .memberCard {
   padding: 14px;
-  min-height: 380px;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 14px 30px rgba(15, 23, 42, 0.05);
@@ -800,12 +799,14 @@ button {
 .memberTop {
   display: grid;
   grid-template-columns: auto 1fr;
-  align-items: center;
+  align-items: start;
   gap: 12px;
+  min-height: 84px;
 }
 
 .memberMeta {
   display: grid;
+  align-content: start;
   gap: 2px;
 }
 
