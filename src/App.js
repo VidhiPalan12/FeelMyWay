@@ -16,34 +16,24 @@ const moods = [
 const reasons = [
   {
     label: "School",
-    emoji: "🏫",
-    image:
-      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=80"
+    emoji: "🏫",  
   },
   {
     label: "Friends",
     emoji: "👯",
-    image:
-      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=700&q=80"
-  },
+    },
   {
     label: "Family",
     emoji: "👨‍👩‍👧",
-    image:
-      "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=700&q=80"
-  },
+    },
   {
     label: "Homework",
     emoji: "📚",
-    image:
-      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=700&q=80"
-  },
+    },
   {
     label: "Other",
     emoji: "🤔",
-    image:
-      "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=700&q=80"
-  }
+    }
 ];
 
 const categories = [
@@ -742,11 +732,10 @@ export default function App() {
                       onClick={() => selectReason(reason)}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.96 }}
-	                    >
-	                      <span className="reasonImageSlot reasonPhotoSlot">
-	                        <img className="reasonPhoto" src={reason.image} alt="" />
-	                        <span className="reasonEmoji reasonPhotoEmoji">{reason.emoji}</span>
-	                      </span>
+                      >
+  	                      <span className="reasonImageSlot">
+  	                        <span className="reasonEmoji">{reason.emoji}</span>
+  	                      </span>
                       <span className="reasonLabel">{reason.label}</span>
                     </motion.button>
                   ))}
@@ -814,18 +803,8 @@ export default function App() {
                 </div>
 
                 <div className="scenarioHero">
-                  <div className={`imageBox ${currentImageValue && !imageLoadFailed ? "hasImage" : "emptyImage"}`}>
-                    {currentImageValue && !imageLoadFailed ? (
-                      <img
-                        key={currentImageValue}
-                        src={currentImageValue}
-                        alt="Scenario visual"
-                        referrerPolicy="no-referrer"
-                        onError={handleImageError}
-                      />
-                    ) : (
-                      <div className="imageLabel">Scenario</div>
-                    )}
+                  <div className="imageBox emptyImage">
+                    <div className="imageLabel">Scenario</div>
                   </div>
                 </div>
 
