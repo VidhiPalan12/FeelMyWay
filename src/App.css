@@ -88,7 +88,7 @@ button {
   font-weight: 900;
   color: #0f172a;
   letter-spacing: 0.07em;
-  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-family: 'Georgia', 'Garamond', 'Times New Roman', serif;
 }
 
 .appXP {
@@ -128,7 +128,7 @@ button {
   color: #0f172a;
   margin-bottom: 16px;
   line-height: 1.06;
-  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-family: 'Georgia', 'Garamond', 'Times New Roman', serif;
 }
 
 .homeContent {
@@ -162,16 +162,16 @@ button {
 
 .moodPanel {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(3, minmax(170px, 1fr));
   gap: 12px;
 }
 
 .moodButton {
-  min-height: 96px;
+  min-height: 118px;
   display: grid;
   place-items: center;
-  gap: 8px;
-  padding: 12px;
+  gap: 10px;
+  padding: 14px;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 22px 60px rgba(15, 23, 42, 0.08);
@@ -190,11 +190,11 @@ button {
 }
 
 .moodEmoji {
-  font-size: 2.2rem;
+  font-size: 2.55rem;
 }
 
 .moodName {
-  font-size: 1.1rem;
+  font-size: 1.28rem;
   font-weight: 800;
   color: #111827;
 }
@@ -207,9 +207,9 @@ button {
   gap: 16px;
   width: 100%;
   max-width: none;
-  min-height: 74px;
-  padding: 8px 12px;
-  border-radius: 18px;
+  min-height: 56px;
+  padding: 6px 10px;
+  border-radius: 14px;
   background: rgba(235, 248, 255, 0.82);
   border: 1px solid rgba(191, 219, 254, 0.9);
 }
@@ -531,30 +531,30 @@ button {
 }
 
 .confirmContent {
-  min-height: 460px;
+  min-height: 400px;
   align-items: stretch;
 }
 
 .confirmMain {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(280px, 420px);
-  gap: 28px;
+  gap: 22px;
   align-items: stretch;
 }
 
 .confirmCopy {
   display: grid;
   align-content: start;
-  gap: 22px;
+  gap: 16px;
 }
 
 .confirmBadge {
   width: fit-content;
-  padding: 10px 18px;
+  padding: 8px 14px;
   border-radius: 999px;
   background: rgba(37, 99, 235, 0.1);
   color: #1d4ed8;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -562,29 +562,29 @@ button {
 
 .confirmDescription {
   max-width: 720px;
-  font-size: 1.9rem;
-  line-height: 1.75;
+  font-size: 1rem;
+  line-height: 1.5;
   color: #475569;
 }
 
 .confirmSummary {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
+  gap: 12px;
 }
 
 .confirmSummaryCard {
-  padding: 22px 24px;
-  border-radius: 26px;
+  padding: 16px 18px;
+  border-radius: 20px;
   background: rgba(255, 255, 255, 0.96);
   box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
   border: 1px solid rgba(191, 219, 254, 0.8);
   display: grid;
-  gap: 10px;
+  gap: 8px;
 }
 
 .confirmSummaryLabel {
-  font-size: 1.5rem;
+  font-size: 0.95rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -594,8 +594,8 @@ button {
 .confirmSummaryValue {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  font-size: 1.85rem;
+  gap: 10px;
+  font-size: 1.2rem;
   font-weight: 900;
   color: #0f172a;
 }
@@ -603,21 +603,21 @@ button {
 .confirmIllustration {
   position: relative;
   min-height: 100%;
-  padding: 28px;
-  border-radius: 30px;
+  padding: 20px;
+  border-radius: 24px;
   background: linear-gradient(165deg, rgba(219, 234, 254, 0.85), rgba(191, 219, 254, 0.95));
   overflow: hidden;
   display: grid;
   align-content: center;
   justify-items: center;
-  gap: 24px;
+  gap: 16px;
 }
 
 .confirmIllustrationGlow {
   position: absolute;
   inset: auto auto 12% 12%;
-  width: 220px;
-  height: 220px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 72%);
   pointer-events: none;
@@ -626,12 +626,12 @@ button {
 .confirmIllustrationEmoji {
   position: relative;
   z-index: 1;
-  width: 150px;
-  height: 150px;
+  width: 108px;
+  height: 108px;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font-size: 5rem;
+  font-size: 3.2rem;
   background: rgba(255, 255, 255, 0.75);
   box-shadow: 0 22px 50px rgba(37, 99, 235, 0.18);
 }
@@ -640,24 +640,24 @@ button {
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 22px 24px;
-  border-radius: 24px;
+  padding: 16px 18px;
+  border-radius: 18px;
   background: rgba(255, 255, 255, 0.88);
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
   display: grid;
-  gap: 10px;
+  gap: 8px;
   text-align: center;
 }
 
 .confirmIllustrationTitle {
-  font-size: 1.65rem;
+  font-size: 1rem;
   font-weight: 900;
   color: #0f172a;
 }
 
 .confirmIllustrationText {
-  font-size: 1.5rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.45;
   color: #475569;
 }
 
@@ -706,20 +706,22 @@ button {
 
 .aboutOverview {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 260px);
-  gap: 14px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
   align-items: stretch;
 }
 
 .aboutMissionCard,
 .aboutImpactCard {
-  padding: 14px 16px 16px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.98);
-  border: 1px solid rgba(226, 232, 240, 0.9);
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.05);
+  padding: 18px 20px;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at top right, rgba(191, 219, 254, 0.22), rgba(191, 219, 254, 0) 38%),
+    rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(219, 234, 254, 0.95);
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.06);
   display: grid;
-  gap: 8px;
+  gap: 10px;
 }
 
 .aboutSectionLabel {
@@ -731,9 +733,9 @@ button {
 }
 
 .aboutMissionText {
-  max-width: 780px;
-  font-size: 1.02rem;
-  line-height: 1.55;
+  max-width: 980px;
+  font-size: 1.05rem;
+  line-height: 1.6;
   color: #334155;
 }
 
@@ -781,7 +783,7 @@ button {
 
 .teamGrid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -793,14 +795,17 @@ button {
   text-align: left;
   display: grid;
   gap: 10px;
+  min-height: 0;
+  align-content: start;
   border: 1px solid rgba(226, 232, 240, 0.85);
 }
 
 .memberTop {
   display: grid;
   grid-template-columns: auto 1fr;
-  align-items: center;
+  align-items: start;
   gap: 12px;
+  min-height: 120px;
 }
 
 .memberMeta {
@@ -846,13 +851,11 @@ button {
 }
 
 .memberDescription {
-  font-size: 0.98rem;
-  line-height: 1.45;
+  font-size: 0.95rem;
+  line-height: 1.35;
   color: #475569;
-  display: -webkit-box;
-  -webkit-line-clamp: 7;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  display: block;
+  overflow: visible;
 }
 
 .logTitle,
@@ -870,10 +873,10 @@ button {
 }
 
 .confirmText {
-  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  font-size: clamp(1.7rem, 3.2vw, 2.8rem);
   font-weight: 900;
-  line-height: 1.08;
-  max-width: 760px;
+  line-height: 1.12;
+  max-width: 640px;
 }
 
 .reasonPanel,
@@ -957,7 +960,7 @@ button {
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 110px;
+  min-height: 126px;
   border-radius: 18px;
   background: linear-gradient(145deg, rgba(219, 234, 254, 0.95), rgba(239, 246, 255, 0.9));
   border: 1px solid rgba(191, 219, 254, 0.9);
@@ -1003,7 +1006,7 @@ button {
 }
 
 .reasonEmoji {
-  font-size: 2.3rem;
+  font-size: 3.15rem;
   line-height: 1;
 }
 
@@ -1081,8 +1084,10 @@ button {
 }
 
 .confirmButton {
-  min-height: 110px;
-  padding: 18px 30px;
+  min-height: 64px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  border-radius: 18px;
 }
 
 .scenarioBackButton {
@@ -1098,10 +1103,11 @@ button {
 
 .moodActionRow .logAgainButton {
   width: auto;
-  min-height: 76px;
-  padding: 12px 20px;
+  min-height: 52px;
+  padding: 8px 16px;
   max-width: 190px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 16px;
 }
 
 .imageBox {
@@ -1128,7 +1134,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: center 72%;
   display: block;
   border-radius: 24px;
 }
@@ -1443,7 +1449,7 @@ button {
   background: var(--piece-color, #ff6b6b);
   animation-name: confetti-burst-fall;
   animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.14, 0.78, 0.2, 1);
+  animation-timing-function: linear;
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.18) inset,
     0 4px 10px rgba(15, 23, 42, 0.08);
@@ -1486,18 +1492,24 @@ button {
 
 @keyframes confetti-burst-fall {
   0% {
-    transform: translate3d(0, -4vh, 0) rotate(var(--rotate-start, 0deg))
+    transform: translate3d(0, -8vh, 0) rotate(var(--rotate-start, 0deg))
       scale(var(--piece-scale, 1));
     opacity: 0;
   }
-  12% {
+  10% {
     opacity: 1;
   }
-  24% {
-    transform: translate3d(calc(var(--drift, 0px) * 0.45), 24vh, 0)
+  30% {
+    transform: translate3d(calc(var(--drift, 0px) * 0.35), 30vh, 0)
       rotate(var(--rotate-mid, 280deg))
       scale(calc(var(--piece-scale, 1) * 1.02));
     opacity: 1;
+  }
+  64% {
+    transform: translate3d(calc(var(--drift, 0px) * 0.72), 74vh, 0)
+      rotate(calc(var(--rotate-mid, 280deg) + 120deg))
+      scale(calc(var(--piece-scale, 1) * 0.99));
+    opacity: 0.85;
   }
   100% {
     transform: translate3d(
@@ -1513,7 +1525,7 @@ button {
 
 @media (max-width: 1400px) {
   .teamGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -1645,7 +1657,7 @@ button {
   }
 
   .confirmIllustration {
-    min-height: 320px;
+    min-height: 260px;
   }
 
   .resultContent {
@@ -1734,7 +1746,11 @@ button {
   }
 
   .reasonImageSlot {
-    min-height: 105px;
+    min-height: 112px;
+  }
+
+  .reasonEmoji {
+    font-size: 2.7rem;
   }
 
   .logsToggleButton {
@@ -1743,8 +1759,9 @@ button {
   }
 
   .confirmButton {
-    min-height: 84px;
-    padding: 16px 24px;
+    min-height: 58px;
+    padding: 10px 20px;
+    font-size: 0.98rem;
   }
 
   .scenarioBackButton {

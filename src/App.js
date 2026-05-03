@@ -65,6 +65,13 @@ const creators = [
       "Interested in psychology and in learning about how people think and feel. She enjoys playing sports, especially in team settings, and values helping others and being someone people can talk to. She is passionate about mental health awareness and wants to support people as they go through social and emotional challenges."
   },
   {
+    name: "Anaeka",
+    title: "Team Member",
+    image: "AN",
+    description:
+      "A sophomore at Skyline High School, passionate about psychology and design. She enjoys using creativity in projects that enrich people's lives and improve overall mental well-being. In her spare time, she enjoys reading and painting."
+  },
+  {
     name: "Ekaansh Govil",
     title: "Vice President",
     image: "EG",
@@ -454,7 +461,7 @@ export default function App() {
         const left = `${6 + Math.random() * 88}%`;
         const drift = `${-140 + Math.random() * 280}px`;
         const sway = `${-24 + Math.random() * 48}px`;
-        const fallDistance = `${82 + Math.random() * 16}vh`;
+        const fallDistance = `${128 + Math.random() * 46}vh`;
         const rotateStart = `${Math.random() * 360}deg`;
         const rotateMid = `${180 + Math.random() * 280}deg`;
         const rotateEnd = `${540 + Math.random() * 420}deg`;
@@ -803,8 +810,18 @@ export default function App() {
                 </div>
 
                 <div className="scenarioHero">
-                  <div className="imageBox emptyImage">
-                    <div className="imageLabel">Scenario</div>
+                  <div className={`imageBox ${currentImageValue && !imageLoadFailed ? "hasImage" : "emptyImage"}`}>
+                    {currentImageValue && !imageLoadFailed ? (
+                      <img
+                        key={currentImageValue}
+                        src={currentImageValue}
+                        alt="Scenario visual"
+                        referrerPolicy="no-referrer"
+                        onError={handleImageError}
+                      />
+                    ) : (
+                      <div className="imageLabel">Scenario</div>
+                    )}
                   </div>
                 </div>
 
@@ -953,14 +970,6 @@ export default function App() {
                     <div className="aboutSectionLabel">Mission Statement</div>
                     <div className="aboutMissionText">
                       Our mission is to help younger students recognize emotions, think through social situations, and practice healthier choices in a way that feels engaging, safe, and encouraging.
-                    </div>
-                  </div>
-
-                  <div className="aboutImpactCard">
-                    <div className="aboutSectionLabel">Impact So Far</div>
-                    <div className="aboutStatNumber">{logs.length}</div>
-                    <div className="aboutStatText">
-                      check-in{logs.length === 1 ? '' : 's'} shared so far, and every new log adds to our story.
                     </div>
                   </div>
                 </div>
