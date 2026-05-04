@@ -110,18 +110,22 @@ function extractDriveFileId(link) {
 }
 
 function getImageSourceCandidates(link) {
-  const normalizedLink = convertDriveLink(link);
-  const driveFileId = extractDriveFileId(link);
+  const safeLink = typeof link === "string" ? link.trim() : "";
+  const normalizedLink = convertDriveLink(safeLink);
+  const driveFileId = extractDriveFileId(normalizedLink || safeLink);
 
   if (!driveFileId) {
     return normalizedLink ? [normalizedLink] : [];
   }
 
-  return [
+  return Array.from(new Set([
     `https://lh3.googleusercontent.com/d/${driveFileId}=w2000`,
     `https://drive.google.com/thumbnail?id=${driveFileId}&sz=w2000`,
-    normalizedLink
-  ].filter(Boolean);
+    `https://drive.google.com/uc?export=view&id=${driveFileId}`,
+    `https://drive.google.com/uc?export=download&id=${driveFileId}`,
+    normalizedLink,
+    safeLink
+  ].filter(Boolean)));
 }
 
 function shuffleQuestions(questionList) {
@@ -831,6 +835,7 @@ export default function App() {
                         src={currentImageValue}
                         alt="Scenario"
                         loading="lazy"
+                        onLoad={() => setImageLoadFailed(false)}
                         onError={handleImageError}
                       />
                     </div>
